@@ -2,7 +2,7 @@
 fis.config.merge({
     modules : {
         parser : {
-            //.tmpl后缀的文件使用fis-parser-utc插件编译
+            //.tmpl后缀的文件使用fis-parser-handlebars插件编译
             tmpl : 'handlebars'
         }
     },
