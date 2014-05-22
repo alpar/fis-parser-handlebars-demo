@@ -1,0 +1,24 @@
+<html>
+<head>
+    <script src="/libs/handlebars.runtime.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        //引入handlebars模板，插件会进行预编译
+        var template = __inline('./demo.tmpl');
+        //产生运行时随机数据
+        var data = {
+            list:[]
+        };
+        var times = Math.round(Math.random()*10);
+        for (var i = 0; i < times; i++) {
+            data.list.push({
+                title:"handlebars-demo-"+i,
+                index:i
+            });
+        };
+        //数据渲染
+        document.write(template(data));
+    </script>
+</body>
+</html>
